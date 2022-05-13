@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	//요소의 뒤에  content를 추가 , 기존 content가 있을 경우 move됨 , 
+	$(function () {
+		$("button").on("click", function () {
+			
+			$(".my").after("<span>장군</span>");
+			//$("<span>장군</span>").insertAfter(".my");
+			//$(".my").after($("h1"));
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<h1>영웅들</h1>
+	<div>
+		<div class="my">홍길동</div>
+		<div class="my">이순신</div>
+	</div>
+	<button>ok</button>
+</body>
+</html>
+
+

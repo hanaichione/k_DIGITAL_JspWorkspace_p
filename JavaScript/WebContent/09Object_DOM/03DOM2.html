@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+    //var arr = ["a.jpg","b.jpg","c.jpg","d.jpg","e.jpg","f.jpg","g.jpg","h.jpg","i.jpg"];
+   // var i=0;
+    function change(v) {
+    	  var arr = ["a.jpg","b.jpg","c.jpg","d.jpg","e.jpg","f.jpg","g.jpg","h.jpg","i.jpg"];
+		var img= document.getElementsByTagName("img");//태그 이름으로 데이터 얻기 -img
+		//img 출력 
+		//img 태그의 배열 
+		var selectArr="";//9개배열 중 3개만 선택 
+		if(v ==1){
+			selectArr= arr.slice(0,3);//0,1,2
+		}
+		if(v ==2){
+			selectArr= arr.slice(3,6);//3,4,5
+		}
+		if( v ==3){
+			selectArr= arr.slice(6,9);
+		}
+		for ( var x in img) {// x= index 
+			img[x].src="../image/"+selectArr[x];//0번배열의 img태그에   0,0, 1,1 , 2,2
+		}
+	}
+    
+    
+</script>
+</head>
+<body>
+<table>
+ <tr>
+  <td><img src="../image/a.jpg" width="100" height="100" ></td>
+  <td><img src="../image/b.jpg" width="100" height="100" ></td>
+  <td><img src="../image/c.jpg" width="100" height="100" ></td>
+ </tr>
+</table>
+<a href="javascript:change(1)">1</a>
+<a href="javascript:change(2)">2</a>
+<a href="javascript:change(3)">3</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

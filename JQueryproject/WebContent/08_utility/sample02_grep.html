@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//$.grep(arr, idx)
+		//grep 필터링 처리 후 다시 배열로 반환 (object, idx )순서로 순서가 다름 
+		var s = ["A","B","C","D"];
+		var arr= $.grep(s, function (data, idx) {//주의 순서가 다름 
+			return data=="B";//B제외 리턴 
+		}, true);//:inverter false인 경우 검색 결과가 true인것만 리턴 함, true로 설정시 조건식이 true인 것을 제외한 
+		//결과를 리턴함 
+		console.log(arr);
+		var arr2= $.grep(s, function (data, idx) {//주의 순서가 다름 
+			return data=="B"; //B만 리턴
+		}, false);//:inverter false인 경우 검색 결과가 true인것만 리턴 함, true로 설정시 조건식이 true인 것을 제외한 
+		//결과를 리턴함 
+		console.log(arr2);
+		var arr3= $.grep(s, function (data, idx) {//주의 순서가 다름 
+			return data=="B"; //B만 리턴
+		});//:inverter false인 경우 검색 결과가 true인것만 리턴 함, true로 설정시 조건식이 true인 것을 제외한 
+		//결과를 리턴함 
+		console.log(arr3);	
+		
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+

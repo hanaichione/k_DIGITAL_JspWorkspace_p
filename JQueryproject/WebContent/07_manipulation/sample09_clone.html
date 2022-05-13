@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<style type="text/css">
+  .new{
+  	border: 5px solid red;
+  }
+</style>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//복사. 모든 하위 요소 복사 
+		$("button").on("click", function() {
+		  		$(this).clone(true).insertAfter($(this));  //true 이벤트핸들러 까지 복사 , 기본 false 
+		});
+	});
+</script>
+</head>
+<body>
+	<button>ok</button>
+</body>
+</html>
+
+

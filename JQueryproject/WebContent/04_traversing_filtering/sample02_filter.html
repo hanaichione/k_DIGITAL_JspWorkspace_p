@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	//1차 필터링 후 2차 필터링 (일치하는 selector )반환
+	$("li").filter(".my").css("color", "red")//.class접근
+	.end()
+	.filter("#a").css("color","green") //li에서 다시 필터링 id접근
+	.end()
+	.filter(":even").css("font-size","40px").end()
+})
+
+    
+</script>
+</head>
+<body>
+<p>Hello</p>
+<ul>
+ <li>A1</li>
+ <li>A2</li>
+ <li class="my">A3</li>
+ <li>A4</li>
+ <li>A5</li>
+ <li id="a">A6</li>
+ <li>A7</li>
+ <li>A8</li>
+</ul>
+</body>
+</html>
+
+

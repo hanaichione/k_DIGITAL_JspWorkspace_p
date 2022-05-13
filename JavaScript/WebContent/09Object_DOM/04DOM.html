@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+    function  xxx() {
+		var f= document.getElementById("fruits");/* select tab선택*/
+		console.log(f.value);/*  */
+		
+	}
+    
+    
+    
+    
+    
+    
+    
+    function  xxx2(s) {
+    	console.log(s);/*  이벤트 발생 dom */
+		console.log(s.value);/*  */		
+	}
+    function  xxx3(s) {
+    	console.log(s);/*  이벤트 발생 dom */
+		console.log(s.value);/*  */		
+	}
+</script>
+</head>
+<body>
+ <select id="fruits" onchange="xxx()"><!-- select  change 이벤트 발생 -->
+  <option value="aaa">사과</option>
+  <option value="bbb">바나나</option><!--  value 삭제 후 테스트 -->
+  <option value="수박">수박</option>
+  <option value="포도">포도</option>
+ </select>
+ 
+ 
+ <select id="fruits2" onchange="xxx2(this)"><!-- select  change 이벤트 발생 -->
+ <!--this : 현재 이벤트 발생된 dom (태그) -->
+  <option value="사과">사과</option>
+  <option value="바나나">바나나</option><!--  value 삭제 후 테스트 -->
+  <option value="수박">수박</option>
+  <option value="포도">포도</option>
+ </select>
+ <select id="fruits3" onchange="xxx3(this.value)"><!-- select  change 이벤트 발생 -->
+ <!--this : 현재 이벤트 발생된 dom (태그) -->
+  <option value="사과">사과</option>
+  <option value="바나나">바나나</option><!--  value 삭제 후 테스트 -->
+  <option value="수박">수박</option>
+  <option value="포도">포도</option>
+ </select>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

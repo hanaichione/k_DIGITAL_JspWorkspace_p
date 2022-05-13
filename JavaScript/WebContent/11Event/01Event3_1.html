@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+   window.onload= function() {
+	var imgs= document.getElementsByTagName("img");//img  태그 선택 
+	for (var i = 0; i < imgs.length-1; i++) {
+		var img= imgs[i];//img 태그 한개 꺼내기 
+		img.onmouseover= function () {//태그에 이벤트 핸들러 달아 주기 
+			console.log(imgs[3].src= this.src);//마우스 오버된 img 태그 .src값 
+		} 
+		/* img.addEventListener("mouseover", function(e) {
+			
+			console.log(imgs[3].src= this.src);
+		}, false); */
+	}
+}
+</script>
+</head>
+<body>
+ <table border="1">
+  <tr>
+    <td><img src="../image/a.jpg" width="100" height="100"  id="x"></td>
+    <td><img src="../image/b.jpg" width="100" height="100" id="y"></td>
+    <td><img src="../image/c.jpg" width="100" height="100" id="z"></td>
+  </tr>
+  <tr>
+   <td  colspan="3"> <img src="../image/a.jpg" width="300" height="300" id="view"></td>
+  </tr>
+ </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<style type="text/css">
+  .new{
+  	border: 5px solid red;
+  }
+  .inner{
+  	color: red;
+  }
+  .my1{
+  	font-size: 40px;
+  }
+</style>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//remove 일치하는 요소 제거 
+		$("button").on("click", function() {
+			//$(".my1").remove();
+			//$(".inner").remove();
+			//$(".inner").remove(".my1"); //my1만 제거 
+		  				
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>영웅들</h1>
+	<div>
+		<div class="inner my1">홍길동</div>
+		<div class="inner my2">이순신</div>
+		<div class="inner my3">유관순</div>
+	</div>
+	<button>toggle</button>
+</body>
+</html>
+
+

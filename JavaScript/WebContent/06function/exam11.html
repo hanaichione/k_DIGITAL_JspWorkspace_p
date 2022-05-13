@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   function aaa(num) {//일반적함수 선언 
+	console.log("aaa 함수"+ num);
+   }
+   var xxx= aaa;  //함수를 변수에 저장 
+   var y=aaa(10); //호출  후 리턴값을 y에 저장 
+   xxx(100);  //변수로 함수 호출 
+   aaa(200);  //일반적함수 호출 
+   ////////////////////////////////////// /////////
+  // func4(100); //함수 선언 전 호출 error
+   var func4= function(num) {    //익명함수를 변수저장 : 리터럴함수 
+	console.log("func4  "+ num);
+}
+   func4(300);  //변수에 저장된 함수 호출 
+   var test= func4(10);//호출 
+   console.log(test);
+   var test2= func4;//저장 
+   console.log(test2);
+   test2(200);
+   
+   //////////////////////////////
+   //변수에 new 이용 함수 생성 후 저장
+   var func5= new Function("x", "y", "return x/y");  //매개변수, 매개변수, 함수본체코드
+   console.log(func5(200,100));
+	
+
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

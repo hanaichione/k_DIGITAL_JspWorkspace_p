@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <script type="text/javascript">
+ function check() {
+	var id= document.querySelector("#userid").value;
+	var pw= document.querySelector("#passwd").value;
+	console.log(id,"  ", pw);
+	if(id.length==0 || pw.length==0){
+		alert("비번, 패스를 입력하세요");
+		event.preventDefault();
+	}
+}
+   
+ 
+ 
+ /*   1.  check함수 구현 : id, pass 가 입력 안될 경우 경고창 띄우기 다시 입력 메세지, 이동금지
+ 	2. id. pass 입력이 되면  com.controll.LoginServlet에 데이터 전송
+ 	3.	파싱 후 브라우저에 아이드 패스 워드 출력 
+ */
+ 
+ 
+ 
+ 
+ 
+ 
+
+</script>
+</head>
+<body>
+ <form action="myLogin" method="post" onsubmit="check()">
+  아이디<input type="text" name="userid" id="userid"><br>
+  비밀번호<input type="text" name="passwd" id="passwd"><br>
+  <input type="submit" value="로그인">
+ </form>
+</body>
+</html>

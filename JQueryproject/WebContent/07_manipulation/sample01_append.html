@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	//append(Content) 기존 text뒤에 새로운 내용 추가 html, 문자열, elements 가능,기존의 내용이 있을 경우 
+	//이동됨
+	$(function() {
+		$("button").on("click", function () {
+		//	$(".my").append("<span>장군</span>");	//기존 내용에 뒤에 추가 
+		//	$("<span>장군</span>").appendTo($(".my"));  //기존 내용에 뒤에 추가 $주의
+			$(".my").append($("h1"));	//기존태그의 이동 		
+				
+		})
+	})
+	
+</script>
+</head>
+<body>
+	<h1>영웅들</h1>
+	<div>
+		<div class="my">홍길동</div>
+		<div class="my">이순신</div>
+	</div>
+	<button>ok</button>
+</body>
+</html>
+
+

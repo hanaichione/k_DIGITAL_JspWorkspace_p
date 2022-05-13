@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성선택자</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+ $(function () {
+	//전체문서 중 first 1
+	var x= $(":first");
+	console.log(x); 
+	//ul한정 : 첫번째ul
+/*  	var x= $("ul:first");
+	console.log(x); */
+	//전체문서
+	 var x= $(":last");
+	console.log(":last>>", x);
+	console.log(":last>>", x.text());
+	//li한정
+	
+	var x= $("li:last");
+	console.log(x);
+});
+	
+</script>
+</head>
+<body>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>
+		<p>Hello</p>
+		<p>hello-end</p>
+	</div>
+	<div>hello-endenenenenenenen</div>
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// forin을 이용한 배열
+var myCars = ["BMW" , "Benz" , "티코"];
+
+for (var num4 in myCars) {
+	console.log("myCars  " + myCars[num4]);
+}
+for ( var i in myCars) {
+	console.log("test>>>"+ myCars[i]);
+}
+// forin을 이용한 객체
+var person = { "name":"홍길동" ,  "age":20 , "address":"서울"};
+
+for (var p in person) {
+	console.log("person 정보: " + p + " : " + person[p] );
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

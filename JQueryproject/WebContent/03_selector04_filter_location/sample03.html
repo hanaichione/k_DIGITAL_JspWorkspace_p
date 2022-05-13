@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script>
+$(function(){
+/*  	var test= $("li");
+	for (var i = 0; i < test.length; i++) {
+		console.log(test[i].innerText);
+	}
+	console.log("======================");
+	for ( var x in test) {
+		console.log(test[x].innerText);
+	}
+	console.log("======================");
+	for (let a of test) {
+		console.log(a.innerText);
+	}  */
+	//부모기준의 자식하나만 있는 것을 선택 
+/* 	var x= $("h1:only-child");
+	console.log(x); */
+	//부모를 기준으로 n번째 자식   //S.fn.init(5) [title, body, ul, li, li, prevObject: S.fn.init(1)]
+/* 	var x= $(":nth-child(2)");
+	console.log(":nth-child(2)>>>", x);
+	//부모기준 배수 번째 자식
+	var x= $(":nth-child(2n)");
+	console.log("3>>>", x); */
+	//짝수번째(index=1부터 시작됨) 부모 ul기준 //S.fn.init(4) [li, li, li, li, prevObject: S.fn.init(1)]
+/* 	var x= $("li:nth-child(even)");
+	console.log("li:nth-child(even)>>>", x);
+	x.css("color", "yellow"); */
+	//홀수 번째 
+/* 	var x= $("li:nth-child(odd)");
+	console.log("li:nth-child(odd)>>>", x); 
+	x.css("color", "yellow"); */
+	//전체문서기준의 짝수(index:0 부터)
+/* 	var x= $(":even"); //:even>>> S.fn.init(11) [html, meta, script, script, div, ul, li, li, li, li, div,
+	console.log(":even>>>",x); */
+	//부모기준 홀수 (index: 0부터);
+	var x= $("li:odd");
+	x.css("font-size", "40px");
+	console.log("li:odd>>>",x); 
+
+	
+});
+
+
+</script>
+</head>
+<body>
+	<div>
+		<h1>eee</h1>
+	</div>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>		
+		<p>Hello</p>
+	</div>
+</body>
+</html>
+
+

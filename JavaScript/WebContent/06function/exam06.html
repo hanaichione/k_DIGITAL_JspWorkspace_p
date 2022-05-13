@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   console.log("1");
+   
+   function aaa(n,n2){  //매개변수 여러개 사용, 리턴값 사용 
+	console.log("2",n,n2);
+	return 100;
+	
+   }
+   console.log("3");
+   var x = aaa("홍길동",100);  //매개변수 넘겨주면서 호출, 리턴값 받기  
+   console.log("4", x);
+   ////////////////////////////////
+	var y=aaa;  //함수를 변수에 저장 
+	console.log(y(1,2));  //변수를 이용 함수 호출 가능 
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

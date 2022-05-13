@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//호이스팅 : var로 선언된 것은 어떤 위치에 있든 간에 위로 끌어올려진다.
+
+	console.log(foo); // undefined
+
+	var foo;
+	foo = "inky";
+	console.log(foo); // inky
+
+/* 	
+       위 예제를 보면 첫번째 콘솔에서 undefined가 뜬다.
+	foo 를 선언 한 것보다 console.log가 위에 있어서 그렇다고 생각하는 
+	사람이 많겠지만 정확하게 말하면 이 코드는 아래와 같다.
+	
+	var foo;
+	console.log(foo); // undefined
+	foo = "inky";
+	console.log(foo); // inky
+
+	즉, var foo 가 가장 위로 끌어올려지고 (호이스팅) 끌어올려진 foo는 값이 할당되지 않았기 때문에 undefined가 된다.
+*/
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+//attr(속성명) , attr("속성명", "값")
+	$(function () {
+	$("button").on("click", function () {
+		var img= $("img");
+		var data= $("img").attr("src");
+		console.log(data);
+		console.log(img);//fn 객체 
+		img.attr("src", "b.jpg");		
+	});		
+		
+	})	
+	
+	</script>
+</head>
+<body>
+    <img src="a.jpg" width="100" height="100">
+	<button>OK</button>
+</body>
+</html>
+
+

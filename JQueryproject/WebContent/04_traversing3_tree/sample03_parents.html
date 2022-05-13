@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>parents: 부모요소 반환(조상포함), 여러개반환 가능</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+		$(function () {
+			//현재 요소의 부모 부터 시작, 루트까지 모두 추가 
+			$("P").parents().css("color","red");
+			$("p").parents("#my").css("font-size", "40px");
+		})
+</script>
+</head>
+<body>
+	<div>
+		A
+		<div>
+			B
+			<p>C</p>
+		</div>
+	</div>
+	<div id="my">
+		<p>D</p>
+	</div>
+</body>
+</html>
+
+

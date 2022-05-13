@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+  
+  window.onload=function(){
+	document.getElementById("update")
+	     .addEventListener("click", update , false);//update버튼에 update함수 등록
+	     
+	     
+	document.getElementById("delete")
+    .addEventListener("click", del , false);	
+	document.getElementById("sendForm")//폼안의 send버튼 
+    .addEventListener("click", sendForm , false);     
+	     
+	/* 폼의 바깥 send버튼  */
+	document.getElementById("send")
+    .addEventListener("click", send , false);
+  };//end onload
+  
+  
+  function update(){
+	  var myForm = document.getElementById("myForm");//form 얻기 	
+	  myForm.action="update.html"; //form의 action 지정 	 
+ 		//event.preventDefault(); //이벤트 정지 
+  }
+  function send(){
+	//폼의 바깥 send버튼 
+	  console.log("zzz=================");
+	  var myForm = document.getElementById("myForm");
+	  myForm.action="send.html";	  
+	  myForm.submit();  //주의 강제로 submit실행 , 폼데이터 넘어감. 
+  }
+
+  function sendForm(){
+
+	  var myForm = document.getElementById("myForm");
+	  myForm.action="send.html";
+	 //폼의 안쪽
+	  //myForm.submit();  
+  }
+
+  
+  
+
+
+  function del(){
+	  var myForm = document.getElementById("myForm");
+	  myForm.action="delete.html";
+	  //event.preventDefault();
+	  
+  }
+  
+  function test() {
+	event.preventDefault();//주의 
+	location.href="target.html";//폼데이터가 넘어가지 않음 
+}
+</script>
+</head>
+<body>
+ <form action="#" id="myForm"><!-- action에 페이지 지정 없음, id지정  -->
+  아이디<input type="text" name="userid"><br>
+  비밀번호<input type="text" name="passwd"><br>
+  <button id="update">수정</button>
+<button id="delete">삭제</button>
+ <button id="sendForm">전송</button> 
+ <button onclick="test()">버튼 inline방식</button>
+ </form>
+ <hr>
+ 폼의 바깥
+ <button id="send">전송</button><!-- send.html -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

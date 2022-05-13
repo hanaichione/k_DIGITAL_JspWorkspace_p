@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<style type="text/css">
+#one{
+	background: blue;
+	border: 1px solid blue;
+	width: 70px;
+	height: 70px;
+	margin: 0 3px;
+	float: left;
+	}
+#two{
+	background: red;
+	border: 1px solid blue;
+	width: 70px;
+	height: 70px;
+	margin: 0 3px;
+	float: left;
+	}
+#three{
+	background: green;
+	border: 1px solid blue;
+	width: 70px;
+	height: 70px;
+	margin: 0 3px;
+	float: left;
+	}
+</style>
+
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+//toggle 대상요소를 숨기거나 보여주는효과를 번갈아 함. 
+$(function () {
+	$("span").click(function () {
+		$("div:hidden:first").fadeIn("slow");
+	})
+
+})
+	
+</script>
+</head>
+<body>
+<span>click here.....</span>
+
+<div id="one" style="display:none;"></div>
+<div id="two" style="display:none;"></div>
+<div id="three" style="display:none;"></div>
+</body>
+</html>
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+$(function () {  //mouseover와는 다르게 자식요소에서는 발생되지 않음
+	$("#outer").mouseenter(function () {
+		$("#log").append("<div>mouseEnter발생 </div>");
+	})
+
+})
+	
+</script>
+</head>
+<body>
+<div id="outer">outer
+<div id="inner">inner</div>
+</div>
+
+<div id="log"> </div>
+</body>
+</html>
+
+

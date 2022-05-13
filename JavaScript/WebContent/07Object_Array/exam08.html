@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   function a(n){//배열 
+	 n[0] = 100;
+   }
+   function b(n) {
+	n=100;
+	}
+   var k = [10,20,30];
+   console.log(k); //10,20,30,40,50
+   a(k);//배열넘김
+   console.log(k); //100, 20,30
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   //k[0] call by ref 
+   var t=10;
+   b(t);
+   console.log(t);//call by value
+   
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

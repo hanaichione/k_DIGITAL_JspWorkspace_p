@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+   function sum(){
+	 var price= document.getElementById("price").value;
+	 var quantity= document.getElementById("quantity").value;
+	 document.getElementById("totalPrice").value= parseInt(price)* parseInt(quantity);
+   }
+</script>
+</head>
+<body>
+
+ 가격<input type="text" name="price" id="price"><br>
+  수량
+ <select id="quantity" onchange="sum()"><!-- this를 넘기게 수정 후 테스트  -->
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+  <option value="40">40</option>
+ </select>
+ <br>
+ 총가격<input type="text" name="totalPrice" id="totalPrice">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	aaa();//선언 전에 호출이 가능하다.
+	function aaa() {//컴파일 단계에 생성
+		console.log("aaa 함수");
+	}
+  
+	console.log(aaa);//호출이 아닌 함수를 출력 
+	var aaa = 20; 
+	 aaa();  
+	
+</script>
+</head>
+<body>
+	<p>hello</p>
+</body>
+</html>

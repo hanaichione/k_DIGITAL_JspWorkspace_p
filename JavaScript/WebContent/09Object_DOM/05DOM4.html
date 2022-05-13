@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+  function xxx() {
+	//var arr= document.getElementsByName("fruits");//주의   dom 의 배열 
+	var arr= document.getElementsByClassName("fruits");//주의   dom 의 배열 
+	console.log(arr);//몇개? 
+	var str="";  //화면에 뿌려질 항목을 누적     항목 + <br> 항목 <br>
+	for (var i = 0; i < arr.length; i++) {//
+		var c= arr[i];
+		if(c.checked){//선택된 항목만 선별 
+			str+= c.value+ "<br>";//선택된 항목의 값을 str 에 누적  apple<br>banana<br>
+		}
+	}
+	document.getElementById("result1").innerHTML = "<h1>"+str+"</h1>";/* div 태그 사이에 html태그
+	사용 출력 */	
+	document.getElementById("result2").innerText = str;/*  div태그 사이에 문자열로 출력 */
+}
+function test(s) {
+	console.log(s.checked);
+	var arr= document.getElementsByClassName("fruits");//주의   dom 의 배열 
+	for (var i = 0; i < arr.length; i++) {//
+		var c= arr[i];
+		c.checked= s.checked;
+	}
+}
+function test2() {//모두선택2번 
+	var ck= document.getElementById("x").checked;
+	console.log(c);
+	var arr= document.getElementsByClassName("fruits");//주의   dom 의 배열 
+	for (var i = 0; i < arr.length; i++) {//
+		var c= arr[i];
+		c.checked= ck;
+	}
+}
+</script>
+</head>
+<body>
+모두선택<input type="checkbox"  onclick="test(this)">
+모두선택2<input type="checkbox" id="x" onclick="test2()">
+<hr>
+좋아하는 &nbsp;&nbsp;&nbsp;         과일 선택하기<br>
+사과<input type="checkbox"  class="fruits" name="fruits" value="apple"><br>
+오렌지<input type="checkbox" class="fruits" name="fruits" value="orange"><br>
+바나나<input type="checkbox"  class="fruits" name="fruits" value="banana"><br>
+<button onclick="xxx()"> 결과보기</button>
+<hr>
+<div id="result1"></div><!--  div, span :   document.getElementById().innerHTML="html태그 " -->
+<hr>
+<div id="result2"></div><!--  div, span :   document.getElementById().innerText="문자열 " -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

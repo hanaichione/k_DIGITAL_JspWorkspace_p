@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+ 
+   function xxx(){
+ 		window.close();	   //내창 닫기 
+   }
+  function xxx2() {
+	/* opener.parent.close() */;
+		opener.close();  //나를 연 창 닫기 
+	}
+</script>
+</head>
+<body>
+이페이지는 자식페이지입니다.<br>
+<button onclick="xxx()">창닫기</button>
+<button onclick="xxx2()">부모창닫기</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

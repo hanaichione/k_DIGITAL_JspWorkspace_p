@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+      //1. 산술연산
+      var a = 10;
+      var b = 3;
+      console.log(a+b);
+      console.log(a-b);
+      console.log(a*b);
+      console.log(a/b);
+      console.log(a%b);//나머지 1
+     
+       var aa = "10";
+       console.log(aa+20);//1020
+       console.log(aa-5);
+       console.log(aa*5);
+       console.log(aa/5);
+      
+      
+     //2. 증감연산
+   	var y = 3;
+   	var y2 = 3;
+   	
+   	++y;//4
+   	y2++;//4
+   	console.log( y + " " + y2);  //4, 4
+   	//y=4, y2=4
+   	var y3 = ++y;   //y3=5, y=5
+   	var y4 = y2++;	//y4=4, y2=5
+   	console.log( y + " " + y3);   //5  , 5
+   	console.log( y2 + " " + y4);  //5,  4
+   	
+  //3. 대입연산자
+	var a = 10;
+	var b = 5;
+	console.log( a += b );
+	console.log( a -= b );
+	console.log( a *= b );
+	console.log( a /= b );
+	console.log( a %= b );//0
+	
+	//4. 비교 연산자
+	var v1 = 10;
+	var v2 = 9;
+	console.log( v1 == v2 );  // equal
+	console.log( v1 > v2 ); 
+	console.log( v1 >= v2 ); 
+	console.log( v1 < v2 ); 
+	console.log( v1 <= v2 ); 
+	console.log( v1 != v2 );   //true
+	
+	//주의할점
+	var w1 = 10;
+	var w2 = "10";
+	
+	console.log( "w1 == w2   ", w1 == w2 );  // 필요하면 타입 변환하고 비교한다. ( equal )
+	console.log("w1 === w2",   w1 === w2 );  // 타입변환하지 않고 비교한다.  ( identical )
+       
+      
+	//5. 논리 연산자
+      console.log(true && true);
+      console.log(true && false);
+      console.log(false && true);
+      console.log(false && false);
+      
+      console.log(true || true);
+      console.log(true || false);
+      console.log(false || true);
+      console.log(false || false);
+    //주의할 점
+  	/*
+  	    객체 || 객체 , 객체 && 객체  형식으로 비교가 가능하다.
+  	    또한 최종적으로 반환되는 값은 true/false 값이 아니고
+  	    좌측 또는 우측 피연산자의 최종평가값이다.
+  	    
+  	    0,'',null,NaN,undefined 는 false로  변환된다.
+  	    
+  	    
+  	    좌객체 || 우객체
+  	    ==> 좌객체가 참이면 우객체를 평가하지 않고 좌객체값을 리턴한다.
+  	        좌객체가 거짓이면 우객체값을 리턴한다.
+  	       
+  	    좌객체 && 우객체
+  		 ==> 좌객체가 참이면 우객체값을 리턴한다.
+  		     좌객체가 거짓이면 좌객체값을 리턴한다.    
+  	       
+  	       
+  	*/
+  	
+  	
+ //or시 좌객체 참 => 좌객체 좌객체 거짓 => 우객체 반환  	
+      console.log("'123' || 10","123" || 10);  //좌 123
+      console.log(  0 || 10);  //0-> 거짓, 우 리턴   10
+     ////////////////////////////////////////////////////////////
+      console.log("'123' && 10","123" && 10); //10
+      console.log( 0 && 10);   //0
+      
+      
+      
+      
+      
+      
+      // 3항
+      var aaa = ( 4>3)? 100:200;
+      console.log(aaa);
+      var aaa2 = ( 4>3)? alert(100):alert(200);
+      console.log(aaa2);    //undefined  
+      var aaa3 = ("aaa")? "AA":"BB";
+      console.log(aaa3); //AA
+    		  
+      
+      function x(a){
+  		var arr = a || []; // 배열 저장
+  		console.log(arr);
+  	   }
+      
+      x();
+      x([1,2]);
+      
+</script>
+</head>
+
+
+
+
+<body>
+
+</body>
+</html>

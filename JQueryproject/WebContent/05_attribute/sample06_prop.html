@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		//prop 검증 true, false 리턴 
+		$("button").on("click", function () {
+			console.log($("#my").attr("checked"));//checked출력
+			console.log($("#my").prop("checked"));//true출력			
+			console.log($("#my2").prop("checked"));//true출력			
+		});
+	});
+</script>
+</head>
+<body>
+    A<input id="my" type="checkbox" name="my" checked="checked"><br>
+    B<input type="checkbox" name="my2"  id="my2"><br>
+	<button>OK</button>
+</body>
+</html>
+
+

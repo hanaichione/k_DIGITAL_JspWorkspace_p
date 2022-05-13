@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	$("#target").on("focus", function () { //focus이벤트
+		console.log("target focus======");
+		$(this).css("background", "yellow");
+	})
+	$("#target").on("blur", function () {
+		console.log("target blur======");
+		$(this).css("background", "");
+	})   //blur 이벤트
+	$("#other").on("click", function () {
+		//$("#target").focus();
+		console.log("other클릭");
+		$("#target").trigger("focus");//trigger
+	})
+	$("#other2").on("click", function () {
+		$("#target").blur();//trigger
+	})
+	$("#other3").on("click", function () {
+		$("#target").off("blur focus"); //이벤트 제거 
+	})
+})
+	
+</script>
+</head>
+<body>
+<form >
+<input type="text" id="target">
+<input type="text" >
+</form>
+<button id="other">focus</button>
+<button id="other2">blur</button>
+<button id="other3">clear</button>
+</body>
+</html>
+
+

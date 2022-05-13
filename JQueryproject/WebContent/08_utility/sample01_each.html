@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//$.each(idx, arr)
+		//데이터를 얻어올 수 있으며 콜백함수내에서 반복을 빠지기 위해 false를 사용함 
+		var s= ["A","B", "C", "D", "E"];
+		for (var i = 0; i < s.length; i++) {
+			console.log("data>>>", s[i]);
+		}		
+		console.log("=======");
+		
+		
+		$.each(s, function (idx, data) {//idx, 값 
+			console.log(idx, data);			
+		});
+		console.log("=======");
+	
+		$(s).each( function (idx, data) {//idx, 값 
+			console.log(idx, data);			
+		}); 
+		
+		console.log("=======");
+		
+		
+		
+		
+		//Json
+		var s2={"one":100, "two":200, "three": 300};
+		$.each(s2, function (key, data) {
+			console.log(key, data);
+		});
+				
+		
+		
+		console.log("=======");
+		var s3=["A","B", "C", "D", "E"];
+		$.each(s3, function (idx, data) {
+			console.log("s3>>>", idx, data);
+			return data != "C"; //return false인 경우 break 기능  //c인경우 false리턴 
+		})
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prev: 바로 앞요소 반환</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		//selector 바로 앞의 형제 요소 
+		$("div").prev().css("color", "red");
+		$("div").prev(".my").css("font-size", "40px");
+	})
+</script>
+</head>
+<body>
+	<div>A</div>
+	<p>A2</p>
+	<div>B</div>
+	<p class="my">B2</p>
+	<div>C</div>
+	<div class="my">C2</div>
+	<p>C3</p>
+</body>
+</html>
+
+

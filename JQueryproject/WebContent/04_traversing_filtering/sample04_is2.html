@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		 var x= $("li").is(function (idx, ele) {
+			console.log(ele);//javascript객체
+			return ele.innerText=="A8";
+		}); 
+		var fnx= $("li").is(function (idx, ele) {
+			var fnele= $(ele);//javascript -> jquery객체 전환
+			console.log(fnele); //fn객체
+			return fnele.text()=="A8" //jquery 명령사용
+		});
+		console.log(x);
+		console.log(fnx);
+		
+	})
+    
+</script>
+</head>
+<body>
+<p>Hello</p>
+<ul>
+ <li>A1</li>
+ <li>A2</li>
+ <li class="my">A3</li>
+ <li>A4</li>
+ <li id="a">A5</li>
+ <li>A6</li>
+ <li>A7</li>
+ <li>A8</li>
+</ul>
+</body>
+</html>
+
+

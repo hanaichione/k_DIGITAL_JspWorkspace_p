@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	//1차검색 후 2차의 selector포함하는 요소 반환
+	$("li").click(kkk);
+})
+function kkk() {
+	//console.log(event);
+	var target= $(event.target); //이벤트 발생 요소 저장
+	console.log(target);
+	if(target.is("li")){
+		target.css("background-color", "green");
+		
+		var isStrong = target.is(function () { //타겟이 ... 라면 
+			console.log($("strong", this));//event발생한 곳에서 strong만 선택
+			console.log($("strong", this).length);
+			return $("strong", this).length==1;//li내의 strong length
+		});//true, false저장
+		if(isStrong){
+			target.css("font-size", "30px");
+		}
+		
+	}
+}
+</script>
+  
+
+</head>
+<body>
+<p>Hello</p>
+<ul>
+ <li>A1</li>
+ <li>A2</li>
+ <li>A3</li>
+ <li>A<strong>4</strong></li>
+ <li>A5</li>
+ </ul>
+ 
+</html>
+
+

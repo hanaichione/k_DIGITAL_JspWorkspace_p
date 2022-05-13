@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<style type="text/css">
+  .new{
+  	border: 5px solid red;
+  }
+</style>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//기존요소를 찾아서 새 요소로 변경 , html문서에 content가 있을 경우 타겟요소로
+		//이동하여 변경됨 (기존 요소의 삭제 )
+		$("button").on("click", function() {
+			//$(".my1").replaceWith("<h3>강감찬</h3>");
+			//$("<h3>세종</h3>").replaceAll($(".my2"));
+			$(".my1").replaceWith($(".my3"));//이동됨
+			
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>영웅들</h1>
+	<div>
+		<div class="my1">홍길동</div>
+		<div class="my2">이순신</div>
+		<div class="my3">유관순</div>
+	</div>
+	<button>toggle</button>
+</body>
+</html>
+
+

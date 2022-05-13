@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02.ready</title>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {//window.onload
+		console.log("$ ready");
+	});
+
+	//jQuery의 축약표시 : $
+	jQuery(document).ready(function () { //window.onload
+		console.log("jQeury ready");
+	});
+	//ready의 간추린 표현식 
+	$(function () {//window.onload
+		console.log("no ready");
+	});
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

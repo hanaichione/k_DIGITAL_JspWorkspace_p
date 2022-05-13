@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+    var arr=["a.jpg", "b.jpg", "c.jpg"];//전역
+    var i=0;//배열  idx값- before, next 에서 공통으로 사용   //전역 
+    function before(){
+    	var img= document.getElementById("flag");
+    	--i;   //지역변수로 선언할 경우 함수 호출시 마다 초기화 됨 
+    	if(i<=0){
+    		i=2;
+    	}
+    	img.src= "../image/"+ arr[i];//img 태그 src속성 변경 
+    }
+    function next(){
+    	var img = document.getElementById("flag");
+    	++i;
+    	if(i>=3){
+    		i=0
+    	}
+    	img.src="../image/"+arr[i];
+    }
+</script>
+</head>
+<body>
+<img src="../image/a.jpg" width="200" height="200" id="flag">
+<button onclick="before()">전</button>
+<button onclick="next()">후</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

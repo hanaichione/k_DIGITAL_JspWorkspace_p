@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//alert("hello");// 경고창 뜬 후 에 코드 진행이 멈춤 이후 경고창 확인 클릭시 이후 코드 실행이 됨 
+
+
+
+ var k = ( 4 > 5) ? 100 : 200;
+ console.log("k====", k );//200
+var k2 = ( 4 > 5) ? alert(1) : alert(2);
+console.log("k2====", k2 );//undefined
+var k3= ( 4 > 5) ? (alert(1) , 100 ): ( alert(2) , 200 );
+console.log("k3====", k3 );//경고창 출력 후 200저장 
+var k4 = ("22") ? 100 : 200; //"22"-> true로 자동 형변환 
+console.log("k4====", k4 );//100
+
+console.log(k+ "\t"+ k2+ "\t"+ k3+"\t"+k4);
+  
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

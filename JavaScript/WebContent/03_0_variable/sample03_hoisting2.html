@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	//호이스팅 : var로 선언된 것은 어떤 위치에 있든 간에 위로 끌어올려진다.
+	console.log(foo); // undefined
+	var foo; //전역변수  foo
+	foo = 3;
+	console.log(foo); // 3
+	/////////////////////////////////////////////////
+	function showFoo() {
+		console.log(">>"+ foo); // undefined- 지역변수 사용 
+
+		var foo;//주의   //지역변수  foo
+		foo = "inky";
+
+		console.log(foo); // inky
+	}
+
+	showFoo();//함수 호출 사용 
+	
+/* 	첫번째 콘솔은 위에서 설명한것처럼 var foo 가 호이스팅 되기 때문에 undefined 를 출력한다.
+	두번째 콘솔은 foo 에 값 3이 할당되기 때문에 3이 호출되어 진다.
+	세번째 콘솔은 함수 showFoo() 바깥의 전역 변수 foo에 이미 3이 할당되어 졌기 때문에 3 이 출력될거라 생각하는 사람이 많을것이다.
+	하지만, undefined를 출력한다.
+	다시 한번 showFoo() 함수의 안쪽을 자세히 보자. 함수 안에 지역 변수 foo가 있다. 이 지역 변수 foo 또한 var로 선언되어 지기 때문에 호이스팅 되고
+	console.log 는 이 지역변수에 값 "inky" 이 할당되어지기 전에 foo 를 호출하기 때문에 
+	undefined가 할당된다.
+	(사실 함수 바깥의 변수와 함수 내의 지역변수를 똑같이 'foo'로 하는 것 자체가 별로 좋은 선택은 아닌듯 하다.)
+ */
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

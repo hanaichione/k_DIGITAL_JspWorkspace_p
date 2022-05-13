@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- DOM접근을 위해 바디 아래 부분에 코딩-->
+<script type="text/javascript">
+
+    function login(){
+    	
+    	// body로 직접 접근 가능
+       var body = document.body;
+       console.log(body);   //
+       
+       
+       //id 속성으로 접근-가장 자주 사용
+       var id2 = document.getElementById("xxx");//# 사용안함. id=xxx
+      	console.log(id2); //<input type="text" id="xxx" name="userid"  class="kkk" value="zzz" >
+      	console.log(id2.value); //<input type="text" id="xxx" name="userid"  class="kkk" value="zzz" >      	
+      	
+      	
+       var pw2 = document.getElementById("yyy"); //id=yyy
+       console.log(pw2);//<input type="password" id="yyy"  name="passwd"  class="kkk" value="xx">
+       console.log(pw2.value);//<input type="password" id="yyy"  name="passwd"  class="kkk" value="xx">
+       
+       console.log("================================================");
+       
+       
+       var classes= document.getElementsByClassName("kkk"); //.빠짐  class이름을 사용- 이름만기재 : 
+       console.log("classes",classes);//여러개 선택결과가 배열로관리됨 
+       console.log("classes",classes[0].value);//여러개 선택결과가 배열로관리됨 
+       var pw= classes[1];
+       console.log(pw.value);
+       
+       console.log("================================================");      
+       
+       
+       //input 태그명을 접근 
+       var inputs= document.getElementsByTagName("input");//태그명 input: 
+       console.log(inputs);//여러개 배열로관리됨       
+       
+       var id = inputs[0];//input -id
+       console.log(id);//<input type="text" id="xxx" name="userid"  class="kkk" value="zzz" >
+       console.log(id.value);//<input type="text" id="xxx" name="userid"  class="kkk" value="zzz" >       
+       
+       var pw = inputs[1];//<input type="password" id="yyy"  name="passwd"  class="kkk" value="xx">
+       console.log(pw.value);
+       console.log("================================================");      
+       // 태그의 name 속성명 이용       
+       var xx =document.getElementsByName("userid");//태그 중 name="userid"
+       console.log(xx[0]);//<input type="text" id="xxx" name="userid"  class="kkk" value="zzz" >
+       console.log("================================================");   
+       var id= document.querySelector("#xxx");//id로 선택시 하나만 선택, #기호 사용
+       console.log(id);
+       console.log("================================================");   
+       var tags= document.querySelectorAll(".kkk");//여러개 선택  css 기호 사용
+       console.log(tags);
+       console.log(tags[0]);
+    /*    document.getElementById("xxx").value="~~~~~~~~~~~~~~~~~~~~~"; */
+     
+    }
+  // login();    //로그인 호출 
+</script>
+</head>
+<body>
+아이디<input type="text" id="xxx" name="userid"  class="kkk" value="tester" ><br>
+비밀번호<input type="password" id="yyy"  name="passwd"  class="kkk" value="1234"><br>
+<button onClick="login()">로그인</button>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

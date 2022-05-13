@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    function aaa(){
+    	console.log("aaa 함수");
+    }
+    function bbb(){
+    	console.log("bbb 함수");
+    	return aaa;  //aaa 함수를 리턴시킴 
+    }
+    var test=bbb();  test();
+    
+    function ccc() {
+		return function(n1, n2) {  //익명함수 리턴
+			return n1+ n2;
+		};
+	}
+  // 3. 일급객체의 세번째 특징- 리턴값에 함수 사용
+   var x =  bbb();
+  console.log(x);   //리턴값으로 함수를 받음  x= aaa함수 
+    x();//aaa함수 호출
+    ///////////////////////////////////////////////// 
+  var  y= ccc(); //함수 호출    // y= function(n1, n2) {  return n1+ n2;  } 리턴함수 저장 
+   	console.log(y); 	   	
+    console.log(y(10,20));   //익명함수 호출 사용   y= function(n1, n2) {  return n1+ n2;  }
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

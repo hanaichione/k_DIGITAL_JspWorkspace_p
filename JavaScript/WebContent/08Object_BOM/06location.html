@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   console.log(location.origin);
+   console.log(location.pathname);
+   console.log(location.hostname);
+   console.log(location.host);
+   console.log(location.protocol);
+   console.log(location.port); 
+   
+   function xxx(){
+	   location.reload();  //새로고침 
+   }
+   function yyy(){
+	  console.log("===========================");
+	  alert();
+	   location.href="target.html";//지정된 페이지로 이동 
+   }
+   function target2() {
+	   var test= document.getElementById("myForm").action; //id값으로 dom element 선택 
+	   console.log(".>>>>>", test);
+	   alert();
+		document.getElementById("myForm").action="target2.html";//action을 다르게 지정 다른페이지로 데이터 전달
+   }
+   function target3() {
+	
+	   location.href="target2.html";
+}
+	function test() {
+		 var test= document.getElementById("myForm"); //id값으로 dom element 선택 
+		 console.log(".>>>>>", test);
+		   console.log(".>>>>>", test.action);
+	}
+	 var test= document.getElementById("myForm");//함수 바깥에서 dom이 만들어 지기 전에 접근 사용 에러 
+	 console.log(".>>>>>", test);
+</script>
+</head>
+<body>
+폼의 바깥 <br>
+<button onclick="xxx()">reload</button><br>
+<a href="javascript:yyy()">target.html</a><br>
+<button onclick="yyy()">버튼target.html</button><br>
+<button onclick="location.href='target.html'">location.href='target.html'</button><br>
+<button onclick="test()">test</button>
+<hr>
+
+<form id="myForm" action="target.html"><!-- default method="get" -->
+	<input type="text" name="userid" ><br>
+	
+	<button onclick="target2()" >target2.html</button><!-- 폼에서 다른페이지로 전달시 action을 변경 -->
+	<!-- 아래부분이동안됨  -->
+	<button onclick="location.href='target2.html'">location.href='target2.html'</button><br>
+	<!-- 아래부분이동안됨  -->
+	<button onclick="target3()">target3()</button><br>
+	<button>전송</button>
+</form>
+</body>
+</html>

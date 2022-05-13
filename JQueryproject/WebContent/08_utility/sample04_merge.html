@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		//$.merge 두배열의 병합, 중복값이 있을시 덮어쓰지 않음
+		var s=["a", "b", "c"];
+		var s1=[1,2,3];
+		var arr= $.merge(s, s1);
+	    console.log(arr);
+	});
+</script>
+</head>
+<body>
+<p id="result">
+</body>
+</html>
+
+

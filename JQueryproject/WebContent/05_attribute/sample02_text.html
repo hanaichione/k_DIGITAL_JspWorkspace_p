@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+//text 값 반환
+//html이 있을 경우 모두 제거 후 문자열만 반환
+//input , textarea은 val() 사용
+$(function () {
+	$("button").on("click", function () {
+		console.log($("#x").text());//getter
+		var data= $("#x").text();
+		$("#result").text(data);//setter
+	});
+})
+	
+</script>
+</head>
+<body>
+    <p id="x"><span>홍길동</span></p>
+    <div id="result"></div>
+	<button>OK</button>
+</body>
+</html>
+
+

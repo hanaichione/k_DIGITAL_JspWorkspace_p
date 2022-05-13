@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script>
+$(function () {
+	//:eq(n) ==>index 0부터  :eq(0)>> S.fn.init [html, prevObject: S.fn.init(1)]
+/* 	var x= $(":eq(0)");
+	console.log(":eq(0)>>", x); */
+	//3번째 li선택  index 0부터 li:eq(2) S.fn.init [li, prevObject: S.fn.init(1)]
+/* 	var x= $("li:eq(2)");
+	console.log("li:eq(2)", x);
+	x.css("color", "red"); */
+	//greater than 모든 li선택 후 
+/* 	var x= $("li:gt(2)");
+	console.log("li:gt(2)", x);
+	x.css("color", "red"); */
+	//less than
+ 	var x= $("li:lt(5)");
+	console.log("li:lt(5)", x);
+	x.css("color", "red");
+});
+
+
+</script>
+</head>
+<body>
+	<div>
+		<h1>JQuery</h1>
+	</div>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>		
+		<p>Hello</p>
+	</div>
+</body>
+</html>
+
+

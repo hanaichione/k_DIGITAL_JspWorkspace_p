@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function  makeFactorialFunc(){
+    return function(x){
+         if( x <= 1) return 1;
+        return x * arguments.callee( x - 1 );//현재 실행함수
+    }
+}
+function test1() {
+	return function test2(x){
+		if(x<=1) return 1;
+		return x*test2(x-1);
+	};
+	
+}
+//var rs= test1()(3);
+var rs= test1();
+rs = rs(3);
+console.log(rs);
+//var result  = makeFactorialFunc()(5);
+//console.log( result );  // 120  ( 5 * 4 * 3 * 2 * 1 )
+
+
+
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

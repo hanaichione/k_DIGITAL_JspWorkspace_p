@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전체태그 : *</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+	$(".myClass").css("color", "red");
+	console.log("첫번째 myClass>>", $(".myClass")); 
+	console.log("첫번째 myClass>>", $(".myClass").first().text());  //첫번째
+	console.log("첫번째 myClass>>", $(".myClass")[0].innerText);  //첫번째
+	console.log("두번째 myClass>>", $(".myClass").last().text());   //마지막
+});
+</script>
+</head>
+<body>
+<p class="notMe">div class="notMe"</p>
+<p class="myClass">p class="myClass1"</p>
+<div class="myClass">div class="myClass2"</div>
+<div class="myClass">div class="myClass3"</div>
+</body>
+</html>

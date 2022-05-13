@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+	div{
+	background: red;
+	border: 1px solid blue;
+	width: 70px;
+	height: 70px;
+	margin: 0 3px;
+	float: left;
+	}
+	.toggleWidth{
+		width: 40px;
+	}
+</style>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$("#run").click(function () {
+			$(":animated").toggleClass("toggleWidth");
+		});
+		
+		function animateIt() {
+			$("#ani").slideToggle("slow", animateIt);
+		}
+		animateIt();
+	});
+</script>
+</head>
+<body>
+
+<div></div>
+<div id="ani"></div>
+<div></div>
+<button id="run">Run</button>
+</body>
+</html>

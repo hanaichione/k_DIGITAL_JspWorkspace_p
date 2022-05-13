@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+  function xxx(){
+	
+	var ssn1= document.getElementById("ssn1").value;
+	console.log(ssn1);
+	
+	if(ssn1.length==6){//6자리인 경우 
+		document.getElementById("ssn2").focus();		//포커스 지정 
+	}
+	
+  }
+</script>
+</head>
+<body>
+ 주민번호<input type="text" id="ssn1" name="ssnA" onkeyup="xxx()">-
+ <!-- 키보드에 한글자 작성시 이벤트 발생 -->
+ <input type="text" id="ssn2" name="ssnB">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

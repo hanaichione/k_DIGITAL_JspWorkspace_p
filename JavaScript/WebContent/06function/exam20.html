@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//3. setInterval 함수, 시간을 설정해서 지정된 시간이 흐른뒤에 반복적으로 함수호출
+/* setInterval(function(){
+ 	  console.log("setInterval")
+   },3000); */
+   var kkk= setInterval(function(){
+ 	  console.log("setInterval")
+   },3000); 
+      
+  setTimeout(function(){//10초뒤에 interval 삭제 
+    	clearInterval(kkk);
+   },10000);
+   //2. setTimeout 함수, 시간을 설정해서 지정된 시간이 흐른뒤에 함수호출
+    
+   
+/*    setTimeout(function(){   //함수 직접 구현 넘기기
+   	alert("bbb");
+   },3000);   //setTimeout 함수 실행  */
+ 
+ //3초후 실행
+/*     function bbb(){
+   	alert("bbb");
+    } */
+   /* 
+    bbb();
+ */
+   //1. 경고창
+/*     alert("경고문.......");//프로그램 일시 정지 
+   console.log("==================");  */
+  
+/*  function aaa(){
+	   alert("aaa");
+	   console.log("=================="); 
+   } */
+   /* 
+  aaa();   */
+ /*   var test= aaa;
+  setTimeout(test,3000); */ //bbb함수 3초후 실행  */
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

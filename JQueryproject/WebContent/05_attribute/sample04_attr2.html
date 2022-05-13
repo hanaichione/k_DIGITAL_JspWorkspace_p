@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+//attr을 사용하여 여러개의 속성을 설정 할  때 {"key":"value", "key":"value"} 사용
+	$(function () {
+		$("button").on("click", function () {
+			var x= $("img").attr("src"); //getter
+			console.log(x);
+			$("img").attr({"src":"b.jpg", "width":"300", "height":"200"}); //setter
+		
+		})
+	})
+</script>
+</head>
+<body>
+    <img src="a.jpg" width="100" height="100">
+	<button>OK</button>
+</body>
+</html>
+
+

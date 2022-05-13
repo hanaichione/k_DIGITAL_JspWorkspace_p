@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    function aaa(){
+    	console.log("aaa 함수");
+    	return 100;
+    }
+   function bbb(x) {  //매개변수로 함수를 받음, x= aaa함수 를 받음 
+	console.log("bbb함수", x);
+	x();  //x=aaa함수 , aaa함수 호출 
+	}
+  // 2. 자바스크립트 첫번째 특징- 전달값에 함수 사용
+    bbb(aaa); //bbb함수에 매개변수로 aaa함수를 전달 
+    bbb(aaa()); //bbb함수에 매개변수로 aaa함수를 전달 
+    
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

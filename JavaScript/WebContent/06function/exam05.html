@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   console.log("1");
+   
+   function aaa(){
+	console.log("2");
+	return 100;//리턴값의 사용 
+   }
+   console.log("3");
+   var x = aaa();//호출, 리턴값 받기 
+   console.log("4", x);
+   ///////////////////////////////////////////////////
+   var y = aaa;//호출이 아닌 함수를 변수에 저장 
+   console.log("y======",y);  
+   y();//함수 호출 
+aaa();
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

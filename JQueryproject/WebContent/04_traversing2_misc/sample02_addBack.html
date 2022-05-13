@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+$(function () { //div 이후 p만 선택이 아닌 addback을 통해 div와 p가 같이 포함 됨
+	$("#x").find("p").addBack().css("color", "red");
+})
+</script>
+</head>
+<body>
+	<div id="x">
+		A
+		<p>B</p>
+	</div>
+	<div>C
+		<p>B</p>
+	</div>
+</body>
+</html>
+
+

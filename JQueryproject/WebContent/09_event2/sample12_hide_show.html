@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+//에니메이션효과
+$(function () {
+	$("#hider").click(function () {
+		$("span").hide("slow");//감추기
+	});
+	$("#shower").click(function () {
+		$("span").show(2000, function () {
+			$("#red").css("font-size", "30px");
+		})
+	});
+
+})
+	
+</script>
+</head>
+<body>
+<button id="hider">Hide</button>
+<button id="shower">show</button>
+<div>
+<span>이성계</span><span>이순신</span>
+<span>강감찬</span><span>윤봉길</span>
+<span>정몽주</span><span id="red">위인들</span>
+</div>
+</body>
+</html>
+
+

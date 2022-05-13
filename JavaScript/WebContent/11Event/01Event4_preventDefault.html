@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//form 5번폼 만들기 , 고전모델 형태로 window.onload사용 5번폼에  onsubmit 이벤트 달고
+// event.preventDefault사용 페이지 안넘어가게 작성 
+    
+    function xxx(){
+    	console.log("AAAAAAAAAAAAAAAAAAAAAAAAA");
+    	alert("xxx()  submit");   
+      	console.log("BBBBBBBBBBBBBBBBBBBBBBBB");
+    }
+    
+    function xxx2(){//return false 이용 제출 금지 
+    	var id= document.getElementById("userid").value;
+    	var passwd= document.getElementById("passwd").value;
+    	var result=false;  //호출곳으로 리턴시킬  boolean 값 
+    	if(id.length>=3 && passwd.length !=0){
+    		result= true;//계속 진행 제출 
+    	}else{
+    		result=false;//진행 금지 
+    		alert("xxx2 에러");
+    	}
+    	return result;  //true, false 선택 리턴 
+    	//return false;
+    	
+    }
+    
+    
+    
+    function xxx3(e){//event를 매개변수로 받음 
+    	alert("xxx3 submit"); 
+    	event.preventDefault();//action 금지 event.prevent() 매개변수로 넘어온 이벤트 동작 정지 
+    	console.log("===============================");    	
+    }
+</script>
+</head>
+<body>
+<form action="target.html" onsubmit="xxx()"><!-- 인라인 방식 처리 submit이벤트 발생시  -->
+아이디======1<input type="text" name="userid"><br>
+비번=======1<input type="text" name="passwd"><br>
+<button>버튼</button><!--  xxx()호출 -->
+<input type="submit" value="로그인">
+<input type="reset" value="취소"><br>
+</form>
+
+<hr>
+<form action="target.html" onsubmit="return  xxx2()"><!-- return 주의 -->
+아이디=====2<input type="text" name="userid" id="userid"><br>
+비번=======2<input type="text" name="passwd" id="passwd"><br>
+<button>버튼</button>
+<input type="submit" value="로그인"><br>
+</form>
+<hr>
+
+<form action="target.html" onsubmit="xxx3()"><!-- 주의  인라인방식시 event를 매개변수로 넘김-->
+아이디=====3<input type="text" name="userid" ><br>
+비번======3<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br>
+<button>버튼</button>
+</form>
+<hr>
+<form action="target.html" id="test"><!-- 주의  -->
+아이디======4<input type="text" name="userid" ><br>
+비번========4<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br>
+<button>버튼</button>
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
